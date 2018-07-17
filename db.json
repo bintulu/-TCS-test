@@ -1,0 +1,23 @@
+{
+        "restaurants": [
+            {
+            "q": "se19",
+            "name": "Taste of Shawarma",
+            "ratingForDisplay": "4.4",
+            "cuisineTypes": ["Middle eastern"]
+            },
+            {
+            "q": "se19",
+            "name": "Roti Time",
+            "ratingForDisplay": "4.6",
+            "cuisineTypes": ["Indian", "Carribbean", "Malay"]
+            },
+            {
+            "q": "se15",
+            "name": "Noodle King",
+            "ratingForDisplay": "4.1",
+            "cuisineTypes": ["Chinese","Korean","Asian Fusion"]
+            }
+
+        ]
+    }

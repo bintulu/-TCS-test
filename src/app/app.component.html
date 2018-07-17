@@ -1,0 +1,28 @@
+<div>
+    <h2>Search for restaurants!</h2>
+    <input #outcode placeholder="Enter an outcode" (keyup.enter)="getRestaurants(outcode.value)">
+    <button (click)="getRestaurants(outcode.value)">Search</button>
+</div>
+<div *ngIf="restaurants | async as restaurants else empty">
+  <table border="1" style="width:100%" >
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Types of Cuisine</th>
+          <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let r of restaurants">
+      <tr>
+        <td>{{r.name}}</td>
+        <td>
+          <ul *ngFor="let c of r.cuisineTypes">
+            <li>{{c}}</li>
+          </ul>
+        </td>
+        <td>{{r.ratingForDisplay}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #empty>No results!</ng-template>
